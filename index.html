@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#10100f">
+  <link rel="icon" href="data:,">
+  <title>Granny: The Old House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Granny: The Old House game">
+    <canvas id="view" aria-label="First person game view"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">⌂</span><div><b>THE OLD HOUSE</b><small>DON'T LET HER HEAR YOU</small></div></div>
+      <div class="top-actions"><button id="mapBtn" class="icon-btn" aria-label="Toggle map">⌖</button><button id="soundBtn" class="icon-btn" aria-label="Toggle sound">♫</button><button id="pauseBtn" class="icon-btn" aria-label="Pause">Ⅱ</button></div>
+    </header>
+    <section class="hud">
+      <div class="objective"><span class="tiny-label">YOUR TASK</span><strong id="objective">Find the exit key</strong></div>
+      <div class="inventory"><div id="keySlot" class="key-slot">⌑</div><span id="inventoryText">EMPTY HANDS</span></div>
+    </section>
+    <div id="hint" class="hint">The house is quiet... for now.</div>
+    <div id="crosshair" class="crosshair"><i></i><i></i></div>
+    <canvas id="minimap" width="150" height="130" aria-label="House map"></canvas>
+    <div class="bottom-hud"><div class="noise-meter"><span class="tiny-label">NOISE</span><div class="meter"><i id="noiseFill"></i></div></div><div id="nightLabel" class="night-label">NIGHT 1</div></div>
+    <div class="touch-controls" aria-label="Touch controls">
+      <div id="stick" class="stick"><div class="stick-base"><div id="stickKnob" class="stick-knob"></div></div><span>MOVE</span></div>
+      <div class="right-controls"><button id="crouchBtn" class="touch-btn"><span>▾</span><small>CROUCH</small></button><button id="useBtn" class="touch-btn use"><span>✦</span><small>USE</small></button></div>
+    </div>
+    <div id="screen" class="screen visible">
+      <div class="intro-card">
+        <div class="eyebrow">A FIRST-PERSON STEALTH ESCAPE</div>
+        <h1>GRANNY<span>’S HOUSE</span></h1>
+        <p>You woke up in a house that isn't yours. Find the old key and get to the front door. She hears every step.</p>
+        <div class="howto"><div><b>W A S D</b><span>MOVE</span></div><div><b>MOUSE</b><span>LOOK</span></div><div><b>E</b><span>PICK UP / ESCAPE</span></div><div><b>SHIFT</b><span>MOVE QUIETLY</span></div></div>
+        <button id="startBtn" class="start-btn">ENTER THE HOUSE <span>→</span></button>
+        <small class="touch-note">On a phone: left stick to move, drag the view to look, use the buttons to crouch and interact.</small>
+      </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="flash" class="flash"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
